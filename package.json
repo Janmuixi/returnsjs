@@ -1,0 +1,23 @@
+{
+  "name": "finjs",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "keywords": [
+    "node",
+    "library",
+    "portfolio"
+  ],
+  "author": "Jan Muixi @janmuixi",
+  "license": "MIT",
+  "description": "This library lets you create a portfolio and calculate returns",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "type": "module",
+  "jest": {
+    "transform": {}
+  }
+}
