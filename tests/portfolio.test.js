@@ -48,4 +48,19 @@ describe("Portfolio", () => {
     expect(portfolio.dailyMarketValues.length).toEqual(4);
     expect(portfolio.transactions.length).toEqual(5);
   });
+  test("sum up all transactions from one day", () => {
+    const portfolio = new Portfolio(exampleMarketValues, exampleTransactions);
+    expect(portfolio.sumDailyTransactions(new Date("2024-01-03"))).toEqual(
+      -100,
+    );
+  });
+  test("calculate daily portfolio return", () => {
+    const portfolio = new Portfolio(exampleMarketValues, exampleTransactions);
+    expect(
+      portfolio.calculatePeriodReturn(
+        new Date("2024-01-01"),
+        new Date("2024-01-03"),
+      ),
+    ).toEqual(0.27966462603140796);
+  });
 });
